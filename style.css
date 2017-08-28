@@ -1,12 +1,12 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'open sans', sans-serif;
 }
 h1 {
 	text-align: center;
-	font-size: 72px;
+	font-size: 55px;
+    margin: 0 auto;
 }
 
 .bookmark-inputs {
@@ -14,24 +14,98 @@ h1 {
 	color: #fff;
 	height: 100%;
 	width: 50%;
+    display: inline-block;
+    position: fixed;
 }
 .logo {
-	width: 100px;
+	width: 80px;
 	margin-top: 200px;
 	margin-left: 10px;
 	margin-right: 10px;
 }
 .link-submission {
 	display: block;
+    font-size: 24px;
 	margin: 30px auto;
-	width: 500px;
+	width: 80%;
 	height: 30px;
+    /*padding-left: 10px;*/
+}
+.link-submission::placeholder {
+    padding-left: 10px;
 }
 .enter {
 	background-color: #ffc107;
+    border: none;
 	color: #fff;
 	display: block;
+    font-weight: 600;
+    font-size: 16px;
 	height: 25px;
-	width: 500px;
+	width: 80%;
 	margin: 10px auto;
+}
+.bookmark-list {
+    background-color: #cfd8dc;
+    display: block;
+    position: fixed;
+    margin-left: 50%;
+    height: 100%;
+    width: 50%;
+}
+.website-title {
+    margin: 10px;
+    color: #455a64;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.website-url {
+    border-top: 1px solid #cfd8dc;
+    border-bottom: 1px solid #cfd8dc;
+    font-size: 20px;
+    font-weight: lighter;
+    margin: 0 10px;
+    padding: 10px 0;
+    color: #607d8b;
+}
+a:hover {
+    text-decoration: underline #ffc107;
+    font-weight: bold;
+}
+a {
+    text-decoration: underline #f2f4f4;
+    color: #607d8b;
+}
+.wrapper {
+    background-color: #fff;
+    border: 1px solid #607d8b;
+    height: 150px;
+    width: 85%;
+    margin: 15px auto;
+}
+.read {
+    background-color: #fff;
+    color: #455A64;
+    font-size: 14px;
+    margin-top: 25px;
+    margin-left: 10px;
+    position: relative;
+    border: none;
+}
+.read:hover {
+    text-decoration: underline #ffc107;
+    font-weight: bold;
+}
+.delete {
+    background-color: #fff;
+    color: #455A64;
+    float: right;
+    margin-top: 25px;
+    margin-right: 10px;
+    border: none;
+    font-size: 14px;
+}
+.delete:hover {
+    text-decoration: underline #ffc107;
 }
