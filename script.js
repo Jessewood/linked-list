@@ -1,13 +1,12 @@
-
-
-
 $('.enter').click(function() {
 	var titleInput = $('.title-input').val()
 	var urlInput = $('.url-input').val()
-	addTitle(titleInput, urlInput)
-})
 
-function addTitle(title, url){
-	//take the values of the input fields assign those to bookmark list section.
-	console.log(title, url)
-}
+	$('.bookmark-list').append(
+`<article class="card">
+			<h3 class="website-title website-title-1">  ${titleInput} </h3>
+			<p class="website-url website-url-1"><a href="websiteurl.com">  ${urlInput}  </a></p>
+			<button class="read">Read</button><button class="delete">Delete</button>
+		</article>`
+		);
+})
