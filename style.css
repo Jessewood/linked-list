@@ -1,112 +1,110 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'open sans', sans-serif;
+	font-family: 'open sans', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 h1 {
-	text-align: center;
 	font-size: 55px;
-    margin: 0 auto;
+  margin: 0 auto;
+  text-align: center;
 }
-
 .bookmark-inputs {
 	background-color: #455A64;
 	color: #fff;
+	display: inline-block;
 	height: 100%;
+	position: fixed;
 	width: 50%;
-    display: inline-block;
-    position: fixed;
 }
 .logo {
-	width: 80px;
 	margin-top: 200px;
-	margin-left: 10px;
 	margin-right: 10px;
+	margin-left: 10px;
+	width: 80px;
 }
 .link-submission {
 	display: block;
-    font-size: 24px;
+  font-size: 24px;
+  height: 30px;
 	margin: 30px auto;
 	width: 80%;
-	height: 30px;
     /*padding-left: 10px;*/
 }
 .link-submission::placeholder {
-    padding-left: 10px;
+  padding-left: 10px;
 }
 .enter {
 	background-color: #ffc107;
-    border: none;
+  border: none;
 	color: #fff;
 	display: block;
-    font-weight: 600;
-    font-size: 16px;
+  font-size: 16px;
+  font-weight: 600;
 	height: 25px;
-	width: 80%;
 	margin: 10px auto;
+	width: 80%;
 }
 .bookmark-list {
-    background-color: #cfd8dc;
-    display: block;
-    position: fixed;
-    margin-left: 50%;
-    height: 100%;
-    width: 50%;
+  background-color: #cfd8dc;
+  display: block;
+  height: 100%;
+  margin-left: 50%;
+  position: fixed;
+  width: 50%;
 }
 .website-title {
-    margin: 10px;
-    color: #455a64;
-    font-weight: 600;
-    font-size: 24px;
+  color: #455a64;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 10px;
 }
-
 .website-url {
-    border-top: 1px solid #cfd8dc;
-    border-bottom: 1px solid #cfd8dc;
-    font-size: 20px;
-    font-weight: lighter;
-    margin: 0 10px;
-    padding: 10px 0;
-    color: #607d8b;
+  border-top: 1px solid #cfd8dc;
+  border-bottom: 1px solid #cfd8dc;
+  color: #607d8b;
+  font-size: 20px;
+  font-weight: lighter;
+  margin: 0 10px;
+  padding: 10px 0;
 }
 a:hover {
-    text-decoration: underline #ffc107;
-    font-weight: bold;
+	font-weight: bold;
+  text-decoration: underline #ffc107;
 }
 a {
-    text-decoration: underline #f2f4f4;
-    color: #607d8b;
+  color: #607d8b;
+  text-decoration: underline #f2f4f4;
 }
 .card {
-    background-color: #fff;
-    border: 1px solid #607d8b;
-    display: block;
-    height: 150px;
-    width: 85%;
-    margin: 15px auto;
+  background-color: #fff;
+  border: 1px solid #607d8b;
+  display: block;
+  height: 150px;
+  margin: 15px auto;
+  width: 85%;
 }
-.read {
-    background-color: #fff;
-    color: #455A64;
-    font-size: 14px;
-    margin-top: 25px;
-    margin-left: 10px;
-    position: relative;
-    border: none;
+.read-style {
+  background-color: #fff;
+  border: none;
+  color: #455A64;
+  font-size: 14px;
+  margin-top: 25px;
+  margin-left: 10px;
+  position: relative;
 }
-.read:hover {
-    text-decoration: underline #ffc107;
-    font-weight: bold;
+.read-style:hover {
+	font-weight: bold;
+  text-decoration: underline #ffc107;
 }
 .delete {
-    background-color: #fff;
-    color: #455A64;
-    float: right;
-    margin-top: 25px;
-    margin-right: 10px;
-    border: none;
-    font-size: 14px;
+  background-color: #fff;
+  border: none;
+  color: #455A64;
+  float: right;
+  font-size: 14px;
+  margin-top: 25px;
+  margin-right: 10px;
 }
 .delete:hover {
-    text-decoration: underline #ffc107;
+  text-decoration: underline #ffc107;
 }
