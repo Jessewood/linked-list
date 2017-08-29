@@ -58,6 +58,7 @@ h1 {
   margin-left: 50%;
   position: fixed;
   width: 50%;
+  overflow: auto;
 }
 
 .website-title {
@@ -113,7 +114,10 @@ a {
 
 .read-card {
 	background-color: yellow;
+}
 
+.read-card .read-style {
+  color: red;
 }
 
 .delete {
@@ -128,4 +132,17 @@ a {
 
 .delete:hover {
   text-decoration: underline #ffc107;
+}
+
+@media only screen and (max-width: 800px) {
+  * {
+    background-color: yellow;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  .logo {
+    width: 60px;
+  }
+
 }
