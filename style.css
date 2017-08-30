@@ -71,7 +71,9 @@ h1 {
 .clear-bookmarks:hover {
 	background-color: #ffd773;
 }
-
+.clear-bookmarks:disabled {
+  background-color: #cfd8dc;
+}
 .bookmark-counter {
   background-color: #455A64;
   margin-top: 15px;
