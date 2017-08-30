@@ -20,6 +20,7 @@ h1 {
 	width: 50%;
 }
 
+
 .logo {
 	margin-top: 200px;
 	margin-right: 10px;
@@ -29,12 +30,16 @@ h1 {
 
 .link-submission {
 	background-color: #fff;
+	border: none;
 	display: block;
   font-size: 24px;
   height: 30px;
 	margin: 30px auto;
-	padding: 3px;
 	width: 80%;
+}
+
+.link-submission::placeholder{
+	padding: 10px;
 }
 
 .enter {
@@ -53,7 +58,7 @@ h1 {
 }
 
 .enter:disabled {
-  /*background-color: #FFFFCC;*/
+  background-color: #cfd8dc;
 }
 
 .bookmark-counter {
@@ -165,7 +170,7 @@ a {
 
 @media only screen and (max-width: 800px) {
   * {
-    background-color:;
+    /*background-color:;*/
   }
   h1 {
     font-size: 40px;
@@ -177,7 +182,7 @@ a {
 
 @media only screen and (max-width: 650px) {
 	* {
-	/*	background-color: #455A64;*/
+		/*background-color: #455A64;*/
 	}
 	.container {
 		height: 100%;
@@ -185,7 +190,7 @@ a {
 	.bookmark-inputs {
 		display: block;
 		float: none;
-		height: 470px;
+		height: 325px;
 		margin: auto;
 		position: relative;
 		width: 100%;
@@ -197,6 +202,9 @@ a {
 		margin: auto;
 		position: relative;
 		width: 100%;
+	}
+	.logo {
+		margin-top: 20px;
 	}
 }
 
