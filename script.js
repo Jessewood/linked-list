@@ -40,3 +40,9 @@ function updateCardCount() {
 	var cardCount = $('.card').length;
 	console.log(cardCount)
 }
+
+
+$('.url-input').on('click', function(){
+	$(this).val('http://')
+})
+
