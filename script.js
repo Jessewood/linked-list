@@ -7,13 +7,18 @@ $('.enter').click(function() {
 			<h3 class="website-title website-title-1">  ${titleInput} </h3>
 			<p class="website-url website-url-1"><a href="${urlInput}">  ${urlInput}  </a></p>
 			<button class="read-style">Read</button><button class="delete">Delete</button>
-		</article>`
+		</article>`;
+	if ($('.url-input').val() = 'http://') {
+
+	}	
 	$('.bookmark-list').append(cardTemplate);
 	updateCardCount();
 	$('.bookmark-number').text($('.card').length);
 	$('.title-input').val("");
 	$('.url-input').val("");
-	$('.enter').attr('disabled',true)
+
+
+	$('.enter').attr('disabled',true);
 
 });
 
@@ -31,6 +36,11 @@ function updateCardCount() {
 	var cardCount = $('.card').length;
 	console.log(cardCount)
 };
+
+function readCardCount () {
+
+}
+
 
 
 $('.url-input').on('click', function(){
@@ -51,6 +61,5 @@ function enableEnter() {
         console.log('else')
     }
 };
-
 
 
