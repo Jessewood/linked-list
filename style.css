@@ -1,6 +1,6 @@
 * {
-font-family: 'open sans', sans-serif;
-  margin: 0;
+	font-family: 'open sans', sans-serif;
+ 	margin: 0;
   padding: 0;
 }
 
@@ -14,6 +14,7 @@ h1 {
 	background-color: #455A64;
 	color: #fff;
 	display: inline-block;
+	float: left;
 	height: 100%;
 	position: fixed;
 	width: 50%;
@@ -27,16 +28,13 @@ h1 {
 }
 
 .link-submission {
+	background-color: #fff;
 	display: block;
   font-size: 24px;
   height: 30px;
 	margin: 30px auto;
+	padding: 3px;
 	width: 80%;
-    /*padding-left: 10px;*/
-}
-
-.link-submission::placeholder {
-  padding-left: 10px;
 }
 
 .enter {
@@ -46,19 +44,23 @@ h1 {
 	display: block;
   font-size: 16px;
   font-weight: 600;
-	height: 25px;
+	height: 30px;
 	margin: 10px auto;
 	width: 80%;
+}
+.enter:hover {
+	background-color: #ffd773;
 }
 
 .bookmark-list {
   background-color: #cfd8dc;
   display: block;
+  float: right;
   height: 100%;
   margin-left: 50%;
+  overflow: auto;
   position: fixed;
   width: 50%;
-  overflow: auto;
 }
 
 .website-title {
@@ -113,11 +115,17 @@ a {
 }
 
 .read-card {
-	background-color: yellow;
+	background-color: #f2f4f4;
 }
 
 .read-card .read-style {
-  color: red;
+  background-color: #f2f4f4;
+  color: #f05a28;
+  text-decoration: none;
+}
+
+.read-card a {
+	text-decoration: underline #cfd8dc;
 }
 
 .delete {
@@ -134,9 +142,14 @@ a {
   text-decoration: underline #ffc107;
 }
 
+.read-card .delete {
+	background-color: #f2f4f4;
+	text-decoration: underline #cfd8dc;
+}
+
 @media only screen and (max-width: 800px) {
   * {
-    background-color: yellow;
+    /*background-color: #455A64;*/
   }
   h1 {
     font-size: 40px;
@@ -144,5 +157,40 @@ a {
   .logo {
     width: 60px;
   }
-
 }
+
+@media only screen and (max-width: 650px) {
+	* {
+	/*	background-color: #455A64;*/
+	}
+	.container {
+		height: 100%;
+	}
+	.bookmark-inputs {
+		display: block;
+		float: none;
+		height: 470px;
+		margin: auto;
+		position: relative;
+		width: 100%;
+	}
+	.bookmark-list {
+		display: block;
+		float: none;
+		height: 400px;
+		margin: auto;
+		position: relative;
+		width: 100%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+

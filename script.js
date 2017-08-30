@@ -17,3 +17,7 @@ $('.bookmark-list').on('click', '.read-style', function(){
 $('.bookmark-list').on('click', '.delete', function(){
 	$(this).closest('article').remove()
 })
+
+$('.url-input').on('click', function(){
+	$(this).val('http://')
+})
