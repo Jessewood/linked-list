@@ -76,7 +76,8 @@ function enableEnter() {
 };
 
 $('.clear-bookmarks').on('click', function(){
-	$('.read-card').remove('.card')
+	$('.read-card').remove('.card');
+	$('.read-number').text($('.read-card').length);
 })
 
 
