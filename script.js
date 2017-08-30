@@ -52,5 +52,7 @@ function enableEnter() {
     }
 };
 
-
+$('.clear-bookmarks').on('click', function(){
+	$('.read-card').remove('.card')
+})
 
