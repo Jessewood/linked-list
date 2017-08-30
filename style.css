@@ -35,7 +35,7 @@ h1 {
   font-size: 22px;
   height: 30px;
 	margin: 30px auto;
-	padding-left: 10px;
+	padding-left: 2%;
 	width: 80%;
 }
 
@@ -48,7 +48,8 @@ h1 {
   font-weight: 600;
 	height: 30px;
 	margin: 10px auto;
-	width: 80%;
+	width: 82%
+
 }
 .enter:hover {
 	background-color: #ffd773;
@@ -66,7 +67,7 @@ h1 {
   font-weight: 600;
 	height: 30px;
 	margin: 10px auto;
-	width: 80%;
+	width: 82%;
 }
 .clear-bookmarks:hover {
 	background-color: #ffd773;
