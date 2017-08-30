@@ -28,6 +28,13 @@ $('.bookmark-list').on('click', '.read-style', function(){
 	readCards();
 	$('.read-number').text($('.read-card').length);
 	$('.unread-number').text(unreadCardCount());
+	if ($('.read-card').length > 0){
+		$('.clear-bookmarks').attr('disabled', false);
+	}
+	else {
+		$('.clear-bookmarks').attr('disabled', true);
+	}
+
 });
 
 $('.bookmark-list').on('click', '.delete', function(){
