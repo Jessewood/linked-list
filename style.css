@@ -53,7 +53,7 @@ h1 {
 }
 
 .enter:disabled {
-  background-color: #FFFFCC;
+  /*background-color: #FFFFCC;*/
 }
 
 .bookmark-counter {

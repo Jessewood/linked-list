@@ -24,10 +24,6 @@ $('.bookmark-list').on('click', '.delete', function(){
 });
 
 
-
-
-
-
 function updateCardCount() {
 	var cardCount = $('.card').length;
 	console.log(cardCount)
@@ -39,14 +35,13 @@ $('.url-input').on('click', function(){
 })
 
 $('.url-input').on('keyup', function(){
-	// console.log($('.url-input').val())
 	var titleInput = $('.title-input').val()
     var urlInput = $('.url-input').val()
     if (titleInput !== "" && urlInput !== ""){
-        $('.enter').prop('disabled');
+        $('.enter').attr('disabled', false);
         console.log("if")
         } else {
-        // $('.enter').prop('disabled');
+        $('.enter').attr('disabled', true);
         console.log('else')
     }
 });
