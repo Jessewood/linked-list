@@ -1,17 +1,9 @@
-function enableEnterButton() {
-	var titleInput = $('.title-input').val()
-	var urlInput = $('.url-input').val()
-	if (titleInput !== "" && urlInput !== ""){
-		$('.enter').removeAttr('disabled');
-		} else {
-		$('.enter').setAttr('disabled',true);
-	}
-}
 
 
 $('.enter').click(function() {
 	var titleInput = $('.title-input').val()
 	var urlInput = $('.url-input').val()
+	// enableEnterButton();
 	var cardTemplate = `<article class="card">
 			<h3 class="website-title website-title-1">  ${titleInput} </h3>
 			<p class="website-url website-url-1"><a href="${urlInput}">  ${urlInput}  </a></p>
@@ -45,4 +37,19 @@ function updateCardCount() {
 $('.url-input').on('click', function(){
 	$(this).val('http://')
 })
+
+$('.url-input').on('keyup', function(){
+	// console.log($('.url-input').val())
+	var titleInput = $('.title-input').val()
+    var urlInput = $('.url-input').val()
+    if (titleInput !== "" && urlInput !== ""){
+        $('.enter').prop('disabled');
+        console.log("if")
+        } else {
+        // $('.enter').prop('disabled');
+        console.log('else')
+    }
+});
+
+
 
