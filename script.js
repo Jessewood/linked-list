@@ -1,3 +1,7 @@
+function unreadCardCount() {
+	var unreadCards = updateCardCount() - readCards();
+	return unreadCards;
+};
 
 
 $('.enter').click(function() {
@@ -7,18 +11,23 @@ $('.enter').click(function() {
 			<h3 class="website-title website-title-1">  ${titleInput} </h3>
 			<p class="website-url website-url-1"><a href="${urlInput}">  ${urlInput}  </a></p>
 			<button class="read-style">Read</button><button class="delete">Delete</button>
-		</article>`
+		</article>`;
 	$('.bookmark-list').append(cardTemplate);
 	updateCardCount();
 	$('.bookmark-number').text($('.card').length);
 	$('.title-input').val("");
 	$('.url-input').val("");
-	$('.enter').attr('disabled',true)
-
+	$('.enter').attr('disabled', true);
+	$('.title-input').focus();
+	$('.bookmark-number').text($('.card').length);
+	$('.unread-number').text(unreadCardCount());
 });
 
 $('.bookmark-list').on('click', '.read-style', function(){
 	$(this).closest('article').toggleClass('read-card')
+	readCards();
+	$('.read-number').text($('.read-card').length);
+	$('.unread-number').text(unreadCardCount());
 });
 
 $('.bookmark-list').on('click', '.delete', function(){
@@ -29,28 +38,34 @@ $('.bookmark-list').on('click', '.delete', function(){
 
 function updateCardCount() {
 	var cardCount = $('.card').length;
-	console.log(cardCount)
+	return cardCount;
 };
+
+function readCards () {
+	var readCardCount = $('.read-card').length;
+	return readCardCount;
+};
+
+
 
 
 $('.url-input').on('click', function(){
 	$(this).val('http://')
 });
 
-$('.url-input').on('input', enableEnter)
-$('.title-input').on('input', enableEnter)
+$('.url-input').on('keyup', enableEnter)
+$('.title-input').on('keyup', enableEnter)
 
 function enableEnter() {
 	var titleInput = $('.title-input').val()
     var urlInput = $('.url-input').val()
-    if (titleInput !== "" && urlInput !== ""){
+    if (urlInput.length <= 7) {
+    	$('.enter').attr('disabled', true);
+    	console.log('if');
+    } else if (titleInput !== "" && urlInput !== ""){
         $('.enter').attr('disabled', false);
-        console.log("if")
-        } else {
-        $('.enter').attr('disabled', true);
-        console.log('else')
+        console.log("else if");
     }
 };
-
 
 
