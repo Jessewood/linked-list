@@ -1,6 +1,6 @@
 * {
-	font-family: 'open sans', sans-serif;
- 	margin: 0;
+  font-family: 'open sans', sans-serif;
+  margin: 0;
   padding: 0;
 }
 
@@ -50,6 +50,22 @@ h1 {
 }
 .enter:hover {
 	background-color: #ffd773;
+}
+
+.enter:disabled {
+  background-color: #FFFFCC;
+}
+
+.bookmark-counter {
+  background-color: #455A64;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.read-counter {
+  background-color: #455A64;
+  margin-top: 15px;
+  text-align: center;
 }
 
 .bookmark-list {
@@ -149,7 +165,7 @@ a {
 
 @media only screen and (max-width: 800px) {
   * {
-    /*background-color: #455A64;*/
+    background-color:;
   }
   h1 {
     font-size: 40px;

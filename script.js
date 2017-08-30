@@ -1,3 +1,14 @@
+function enableEnterButton() {
+	var titleInput = $('.title-input').val()
+	var urlInput = $('.url-input').val()
+	if (titleInput !== "" && urlInput !== ""){
+		$('.enter').removeAttr('disabled');
+		} else {
+		$('.enter').setAttr('disabled',true);
+	}
+}
+
+
 $('.enter').click(function() {
 	var titleInput = $('.title-input').val()
 	var urlInput = $('.url-input').val()
@@ -6,8 +17,9 @@ $('.enter').click(function() {
 			<p class="website-url website-url-1"><a href="${urlInput}">  ${urlInput}  </a></p>
 			<button class="read-style">Read</button><button class="delete">Delete</button>
 		</article>`
-
 	$('.bookmark-list').append(cardTemplate);
+	updateCardCount()
+	$('.bookmark-number').text($('.card').length)
 });
 
 $('.bookmark-list').on('click', '.read-style', function(){
@@ -15,9 +27,22 @@ $('.bookmark-list').on('click', '.read-style', function(){
 })
 
 $('.bookmark-list').on('click', '.delete', function(){
-	$(this).closest('article').remove()
-})
+	$(this).closest('article').remove();
+	updateCardCount();
+});
+
+
+
+
+
+
+function updateCardCount() {
+	var cardCount = $('.card').length;
+	console.log(cardCount)
+}
+
 
 $('.url-input').on('click', function(){
 	$(this).val('http://')
 })
+
