@@ -21,7 +21,6 @@ h1 {
   text-align: center;
 }
 
-
 .logo {
 	margin-top: 200px;
 	margin-right: 10px;
@@ -33,14 +32,11 @@ h1 {
 	background-color: #fff;
 	border: none;
 	display: block;
-  font-size: 24px;
+  font-size: 22px;
   height: 30px;
 	margin: 30px auto;
+	padding-left: 10px;
 	width: 80%;
-}
-
-.link-submission::placeholder{
-	padding: 10px;
 }
 
 .enter {
@@ -60,6 +56,20 @@ h1 {
 
 .enter:disabled {
   background-color: #cfd8dc;
+}
+.clear-bookmarks {
+	background-color: #ffc107;
+  border: none;
+	color: #fff;
+	display: block;
+  font-size: 16px;
+  font-weight: 600;
+	height: 30px;
+	margin: 10px auto;
+	width: 80%;
+}
+.clear-bookmarks:hover {
+	background-color: #ffd773;
 }
 
 .bookmark-counter {
@@ -174,6 +184,12 @@ a {
 	text-decoration: underline #cfd8dc;
   outline: none;
 }
+input:focus {
+	outline: none;
+}
+button:focus {
+	outline: none;
+}
 
 @media only screen and (max-width: 800px) {
   * {
@@ -197,7 +213,7 @@ a {
 	.bookmark-inputs {
 		display: block;
 		float: none;
-		height: 325px;
+		height: 400px;
 		margin: auto;
 		position: relative;
 		width: 100%;
@@ -212,6 +228,16 @@ a {
 	}
 	.logo {
 		margin-top: 20px;
+	}
+}
+
+
+@media only screen and (max-width: 350px) {
+	h1 {
+		font-size: 20px;
+	}
+	.logo {
+		width: 30px;
 	}
 }
 
