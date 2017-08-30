@@ -1,4 +1,4 @@
-enableEnterButton();
+
 
 $('.enter').click(function() {
 	var titleInput = $('.title-input').val()
@@ -9,8 +9,9 @@ $('.enter').click(function() {
 			<p class="website-url website-url-1"><a href="${urlInput}">  ${urlInput}  </a></p>
 			<button class="read-style">Read</button><button class="delete">Delete</button>
 		</article>`
-
 	$('.bookmark-list').append(cardTemplate);
+	updateCardCount()
+	$('.bookmark-number').text($('.card').length)
 });
 
 $('.bookmark-list').on('click', '.read-style', function(){
@@ -18,8 +19,20 @@ $('.bookmark-list').on('click', '.read-style', function(){
 })
 
 $('.bookmark-list').on('click', '.delete', function(){
-	$(this).closest('article').remove()
-})
+	$(this).closest('article').remove();
+	updateCardCount();
+});
+
+
+
+
+
+
+function updateCardCount() {
+	var cardCount = $('.card').length;
+	console.log(cardCount)
+}
+
 
 $('.url-input').on('click', function(){
 	$(this).val('http://')
@@ -39,15 +52,4 @@ $('.url-input').on('keyup', function(){
 });
 
 
-function enableEnterButton() {
-	console.log('hi')
-    var titleInput = $('.title-input').val()
-    var urlInput = $('.url-input').val()
-    if (titleInput === "" && urlInput === ""){
-        $('.enter').removeAttr('disabled');
-        console.log("if")
-        } else {
-        $('.enter').setAttr('disabled');
-        console.log('else')
-    }
-}
+
