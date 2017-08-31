@@ -40,6 +40,8 @@ $('.bookmark-list').on('click', '.read-style', function(){
 $('.bookmark-list').on('click', '.delete', function(){
 	$(this).closest('article').remove();
 	updateCardCount();
+	$('.bookmark-number').text($('.card').length);
+	$('.unread-number').text(unreadCardCount());
 });
 
 
@@ -78,6 +80,8 @@ function enableEnter() {
 $('.clear-bookmarks').on('click', function(){
 	$('.read-card').remove('.card');
 	$('.read-number').text($('.read-card').length);
+	$('.bookmark-number').text($('.card').length);
+	// $('.unread-number').text(unreadCardCount());
 })
 
 
