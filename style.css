@@ -212,6 +212,16 @@ button:focus {
 	outline: none;
 }
 
+@media only screen and (max-width: 2560px) {
+
+	h1 {
+		font-size: 5vw;
+	}
+	.logo {
+		width: 7vw;
+	}
+}
+
 @media only screen and (max-width: 800px) {
 
   h1 {
@@ -259,6 +269,12 @@ button:focus {
 
 	.logo {
 		width: 30px;
+	}
+	.count-list {
+		font-size: 14px;
+	}
+	.link-submission {
+		margin-top: 10px;
 	}
 }
 
