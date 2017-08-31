@@ -45,6 +45,12 @@ $('.bookmark-list').on('click', '.delete', function(){
 	$('.bookmark-number').text($('.card').length);
 	$('.read-number').text($('.read-card').length);
 	$('.unread-number').text(unreadCardCount());
+	if ($('.read-card').length === 0) {
+		$('.clear-bookmarks').attr('disabled', true);
+	}
+	else {
+		$('.clear-bookmarks').attr('disabled', false);
+	}
 });
 
 //Force the URL in input field
