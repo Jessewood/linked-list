@@ -41,6 +41,7 @@ $('.bookmark-list').on('click', '.delete', function(){
 	$(this).closest('article').remove();
 	updateCardCount();
 	$('.bookmark-number').text($('.card').length);
+	$('.read-number').text($('.read-card').length);
 	$('.unread-number').text(unreadCardCount());
 });
 
