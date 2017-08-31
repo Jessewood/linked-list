@@ -1,7 +1,6 @@
-function unreadCardCount() {
-	var unreadCards = updateCardCount() - readCards();
-	return unreadCards;
-};
+// This event listener drives the whole app around the enter button. 
+// Listens for a click and appends a new card. Updates card count. 
+// Disables enter button.
 
 $('.enter').click(function() {
 	var titleInput = $('.title-input').val();
@@ -17,11 +16,12 @@ $('.enter').click(function() {
 	$('.title-input').val("");
 	$('.url-input').val("");
 	$('.title-input').focus();
-	$('.bookmark-number').text($('.card').length);
 	$('.unread-number').text(unreadCardCount());
 	$('.enter').attr('disabled', true);
 });
 
+//Toggles the class for the read cards. Updates read and unread bookmark count on click.
+//Turns the clear bookmarks on if there is at least one read, turns off if there's none. 
 
 $('.bookmark-list').on('click', '.read-style', function(){
 	$(this).closest('article').toggleClass('read-card')
@@ -36,6 +36,9 @@ $('.bookmark-list').on('click', '.read-style', function(){
 	}
 });
 
+//Targeting article delete button is inside so we can remove entire article.
+//Updates all bookmark counters.
+
 $('.bookmark-list').on('click', '.delete', function(){
 	$(this).closest('article').remove();
 	updateCardCount();
@@ -44,41 +47,60 @@ $('.bookmark-list').on('click', '.delete', function(){
 	$('.unread-number').text(unreadCardCount());
 });
 
+//Force the URL in input field
 
-function updateCardCount() {
-	var cardCount = $('.card').length;
-	return cardCount;
-};
-
-function readCards () {
-	var readCardCount = $('.read-card').length;
-	return readCardCount;
-};
-
-$('.url-input').on('click', function(){
+$('.url-input').on('focus', function(){
 	$(this).val('http://')
 });
 
+//Sets event listeners for inputs on every keyup to see if buttons should be disabled
+
 $('.url-input').on('keyup', enableEnter);
+
 $('.title-input').on('keyup', enableEnter);
 
-function enableEnter() {
-	var titleInput = $('.title-input').val()
-    var urlInput = $('.url-input').val()
-    if (urlInput.length <= 7) {
-    	$('.enter').attr('disabled', true);
-    	console.log('if');
-    } else if (titleInput !== "" && urlInput !== ""){
-        $('.enter').attr('disabled', false);
-        console.log("else if");
-    }
-};
+//Clear bookmarks button on click targets and removes cards marked read.
+//Also updates all bookmark counts.
 
 $('.clear-bookmarks').on('click', function(){
 	$('.read-card').remove('.card');
 	$('.read-number').text($('.read-card').length);
 	$('.bookmark-number').text($('.card').length);
 	$('.clear-bookmarks').attr('disabled', true);
-})
+});
+
+//Function to update number of unread cards.
+
+function unreadCardCount() {
+	var unreadCards = updateCardCount() - readCards();
+	return unreadCards;
+};
+
+//Updates total bookmark count.
+
+function updateCardCount() {
+	var cardCount = $('.card').length;
+	return cardCount;
+};
+
+//Updates number of read cards.
+
+function readCards () {
+	var readCardCount = $('.read-card').length;
+	return readCardCount;
+};
+
+//Forces user to keep the http:// in the url input or enter will disable.
+
+function enableEnter() {
+	var titleInput = $('.title-input').val()
+    var urlInput = $('.url-input').val()
+    if (urlInput.length <= 7) {
+    	$('.enter').attr('disabled', true);
+    } else if (titleInput !== "" && urlInput !== ""){
+        $('.enter').attr('disabled', false);
+    }
+};
+
 
 

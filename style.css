@@ -17,8 +17,8 @@ h1 {
 	float: left;
 	height: 100%;
 	position: fixed;
-	width: 50%;
   text-align: center;
+  width: 50%;
 }
 
 .logo {
@@ -136,14 +136,14 @@ h1 {
   padding: 10px 0;
 }
 
-a:hover {
-	font-weight: bold;
-  text-decoration: underline #ffc107;
-}
-
 a {
   color: #607d8b;
   text-decoration: underline #f2f4f4;
+}
+
+a:hover {
+	font-weight: bold;
+  text-decoration: underline #ffc107;
 }
 
 .card {
@@ -200,8 +200,8 @@ a {
 
 .read-card .delete {
 	background-color: #f2f4f4;
-	text-decoration: underline #cfd8dc;
   outline: none;
+  text-decoration: underline #cfd8dc;
 }
 
 input:focus {
@@ -213,8 +213,8 @@ button:focus {
 }
 
 @media only screen and (max-width: 2560px) {
-
-	h1 {
+  
+  h1 {
 		font-size: 5vw;
 	}
 	.logo {
@@ -261,18 +261,20 @@ button:focus {
 	}
 }
 
-
 @media only screen and (max-width: 350px) {
-	h1 {
+	
+  h1 {
 		font-size: 20px;
 	}
 
 	.logo {
 		width: 30px;
 	}
+
 	.count-list {
 		font-size: 14px;
 	}
+  
 	.link-submission {
 		margin-top: 10px;
 	}
