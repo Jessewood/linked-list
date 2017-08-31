@@ -3,7 +3,6 @@ function unreadCardCount() {
 	return unreadCards;
 };
 
-
 $('.enter').click(function() {
 	var titleInput = $('.title-input').val();
 	var urlInput = $('.url-input').val();
@@ -17,11 +16,12 @@ $('.enter').click(function() {
 	$('.bookmark-number').text($('.card').length);
 	$('.title-input').val("");
 	$('.url-input').val("");
-	$('.enter').attr('disabled', true);
 	$('.title-input').focus();
 	$('.bookmark-number').text($('.card').length);
 	$('.unread-number').text(unreadCardCount());
+	$('.enter').attr('disabled', true);
 });
+
 
 $('.bookmark-list').on('click', '.read-style', function(){
 	$(this).closest('article').toggleClass('read-card')
@@ -34,7 +34,6 @@ $('.bookmark-list').on('click', '.read-style', function(){
 	else {
 		$('.clear-bookmarks').attr('disabled', true);
 	}
-
 });
 
 $('.bookmark-list').on('click', '.delete', function(){
@@ -56,15 +55,12 @@ function readCards () {
 	return readCardCount;
 };
 
-
-
-
 $('.url-input').on('click', function(){
 	$(this).val('http://')
 });
 
-$('.url-input').on('keyup', enableEnter)
-$('.title-input').on('keyup', enableEnter)
+$('.url-input').on('keyup', enableEnter);
+$('.title-input').on('keyup', enableEnter);
 
 function enableEnter() {
 	var titleInput = $('.title-input').val()
@@ -82,7 +78,7 @@ $('.clear-bookmarks').on('click', function(){
 	$('.read-card').remove('.card');
 	$('.read-number').text($('.read-card').length);
 	$('.bookmark-number').text($('.card').length);
-	// $('.unread-number').text(unreadCardCount());
+	$('.clear-bookmarks').attr('disabled', true);
 })
 
 

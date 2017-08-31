@@ -49,8 +49,8 @@ h1 {
 	height: 30px;
 	margin: 10px auto;
 	width: 82%
-
 }
+
 .enter:hover {
 	background-color: #ffd773;
 }
@@ -58,6 +58,7 @@ h1 {
 .enter:disabled {
   background-color: #cfd8dc;
 }
+
 .clear-bookmarks {
 	background-color: #ffc107;
   border: none;
@@ -69,27 +70,42 @@ h1 {
 	margin: 10px auto;
 	width: 82%;
 }
+
 .clear-bookmarks:hover {
 	background-color: #ffd773;
 }
+
 .clear-bookmarks:disabled {
   background-color: #cfd8dc;
 }
+
 .bookmark-counter {
   background-color: #455A64;
-  margin-top: 15px;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 15px auto;
   text-align: center;
 }
 
 .read-counter {
   background-color: #455A64;
   display: inline-block;
-  margin: 15px 0 auto;}
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0 auto;
+}
 
 .unread-counter {
   background-color: #455A64;
-  margin: 15px 0 auto;
   display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 15px 0 auto;
+}
+
+.numbers {
+  color: #ffd773;
 }
 
 .bookmark-list {
@@ -187,17 +203,17 @@ a {
 	text-decoration: underline #cfd8dc;
   outline: none;
 }
+
 input:focus {
 	outline: none;
 }
+
 button:focus {
 	outline: none;
 }
 
 @media only screen and (max-width: 800px) {
-  * {
-    /*background-color:;*/
-  }
+
   h1 {
     font-size: 40px;
   }
@@ -207,12 +223,11 @@ button:focus {
 }
 
 @media only screen and (max-width: 650px) {
-	* {
-		/*background-color: #455A64;*/
-	}
+
 	.container {
 		height: 100%;
 	}
+
 	.bookmark-inputs {
 		display: block;
 		float: none;
@@ -221,6 +236,7 @@ button:focus {
 		position: relative;
 		width: 100%;
 	}
+
 	.bookmark-list {
 		display: block;
 		float: none;
@@ -229,6 +245,7 @@ button:focus {
 		position: relative;
 		width: 100%;
 	}
+
 	.logo {
 		margin-top: 20px;
 	}
@@ -239,6 +256,7 @@ button:focus {
 	h1 {
 		font-size: 20px;
 	}
+
 	.logo {
 		width: 30px;
 	}
